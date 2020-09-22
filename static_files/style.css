@@ -1,0 +1,32 @@
+body {
+	background-color: #BCC;
+}
+
+
+h1 {	
+        letter-spacing: 0.2em;
+	color: black;
+        font: bold 30px Verdana, sans-serif;
+}
+
+p {
+	color: #B00;
+	font:  bold 1em sans-serif;
+}
+
+#navigation {
+	width: 500px;
+	margin-bottom: 0.25em;
+	border-color: blue;
+	border-style: solid;
+        border-width: 2px;
+        padding: 5px 10px; 
+        background-color: #BBB;
+        font: bold 1em sans-serif;
+        text-align: left;
+        display: block;
+}
+
+#navigation:hover {
+	background-color: #CCC;
+}

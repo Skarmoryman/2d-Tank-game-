@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta HTTP-EQUIV="EXPIRES" CONTENT="-1">
+		<script src="jquery-3.3.1.min.js"></script>
+		<script language="javascript" src="model.js" > </script>
+		<script language="javascript" src="controller.js" > </script>
+
+
+		<style>
+			#ui_login {
+				display: true;
+			}
+			#ui_register {
+				display: false;
+			}
+			#ui_game  {
+				display: false;
+			}
+			#ui_delete {
+				display: false;
+			}
+			#ui_main {
+				display: false
+			}
+			#ui_change{
+				display: false
+			}
+			#ui_end{
+				display: false
+			}
+		</style>
+		<title>Computing science 309</title>
+  		<link rel="stylesheet" href="style.css" type="text/css">
+	</head>
+	<body bgcolor-"ffffff">
+		<h1> Epic Tank Battles! </h1>
+		<div id="ui_login">
+			<div>
+				<h2> Login <br/>
+				<input type="text" id="user" placeholder="Username"> <br/>
+				<input type="password" id="password" placeholder="Password" /> <br/>
+				<input type="submit" id="loginSubmit" value="Login"> <br/>
+				</h2>
+				<p id="msg"> </p>
+				<br/> <br/> 
+				No account? <br/>
+				Register here:	<input type="submit" id="register" value="Make Account"><br>
+				<br>
+				
+			</div>
+		</div>
+
+		<div id="ui_register">
+			<div>
+				<h2> Register <br/>
+				<input type="text" id="reguser" placeholder="Username"> <br/>
+				<input type="password" id="regpassword" placeholder="Password"> <br/>
+				<input type="password" id="regpasswordconf" placeholder="Confirm Password" /> <br/>
+				<input type="submit" id="registerSubmit" value="Register"> <br/>
+				</h2>
+
+				<p id="regmsg"> </p>
+				<br/>
+				Already have an account? <br/>
+				Login here: <input type="submit" id="login" value="Go to Login">
+			</div>
+		</div>
+
+
+
+		<div id="ui_main">
+
+			<div id="navigation"> 	
+				<input type="submit" id="home" value="Home">
+				<input type="submit" id="startgame" value="Start Game">
+				<input type="submit" id="changepw" value="Change Password">
+				<input type="submit" id="delete" value="Delete Account">
+				<input type="submit" id="logout" value="Logout">
+			</div>
+
+
+			<div id="ui_home">
+				</br>
+				<div>
+					Welcome Commander: <p id="mainmsg"> </p>
+				</div>
+				</br> </br>
+				<h4> Top 10 Preforming Commanders: </h4>
+				<div id="allScores"></div>
+			</div>
+
+
+			<div id="ui_game">	
+				<center>
+					<h1></h1>
+					<img hidden id="crosshair" src="crosshair.png" width="100" height="100">
+					<img hidden id="box1" src="box1.png" width="50" height="50">
+					<img hidden id="box2" src="box2.png" width="50" height="50">
+					<img hidden id="rock1" src="rock1.png" width="65" height="65">
+
+					<audio id="pistolsound">
+						<source src="pistol.mp3" type="audio/mpeg">
+					</audio>
+					<audio id="arsound">
+						<source src="ar.mp3" type="audio/mpeg">
+					</audio>
+					 <audio id="reload">
+						<source src="reload.mp3" type="audio/mpeg">
+					</audio>
+					<canvas hidden id="minimap" width="1000" height="1000" style="border:1px solid black; cursor: none; "> </canvas>			
+					<canvas id="stage" width="1500" height="700" style="border:1px solid black; cursor: none "> </canvas>
+					<canvas hidden id="invis" width="4000" height="4000"> </canvas>
+				</center>
+				<div>
+					<h4> Controls: </h4>
+					<ul>
+					<li>'W A S D' to move</li>
+					<li>'Left Click' to shoot</li>
+					<li>'R' to reload</li>
+					<li>'P' to pause</li>
+					<li>'M' to display minimap</li>
+					<li>'1 2' to switch weapons</li>
+					</ul>
+					<h4> Hints: </h4>
+					<ul>
+					<li>When your gun is darkred, you have to reload.</li>
+					<li>When your gun is orange, you are reloading and cannot shoot.</li>
+					<li>Destroy boxes for health and ammo pickups.</li>
+					<li>Health and ammo pickups disappear when a new round starts. Be sure to pick them up before defeating the last enemy.</li>
+					<li>Enemies may sometimes get stuck behind objects. Use this time to heal your sheilds then hunt then down with the minimap!</li>
+					<li>The Enemies don't think highly of one another and can damage each other. Use this to your advantage!</li>
+					</ul>
+				</div>
+			</div>
+
+
+
+			<div id="ui_change">
+				<div>
+					<h2>
+					<input type="password" id="oldpass" placeholder="Old Password"> <br/>
+					<input type="password" id="newpass" placeholder="New Password"> <br/>
+					<input type="submit" id="makechange" value="Confirm Change">
+					</h2>
+					<p id="changemsg"> </p>
+				</div>
+			</div>
+
+
+			<div id="ui_delete">
+				<div>
+					<h2>
+					<input type="submit" id="deleteSubmit" value="Delete my Account"> <br/>
+					</h2>
+					<p id="delmsg"> </p>
+				</div>
+			</div>
+
+
+			<div id="ui_end">
+				<center>
+					<p> You Died! </p>				
+				</center>
+			</div>
+		</div>
+	</body>
+</html>
+
