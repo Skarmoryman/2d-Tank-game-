@@ -3,3 +3,6 @@ Play until death. Can create profile and there is a database to record top scori
 
 Created using Javascript, HTML and CSS. The view is generated using canvas. Restful API used. 
 Hosted with nodejs.
+
+-run setup.bash 
+-nodejs ftd.js 10599
